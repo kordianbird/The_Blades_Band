@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/56ab3192f1.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: url('images/');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/The-Blades-Logo.png" alt="Bootstrap" width="30" height="24">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="concerts.html">Concerts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-image-short mb-5">
+        <img class="img-fluid" src="images/banner.png" alt="concert">
+        <div class="center">
+            <p>Upcoming Concerts</p>
+        </div>
+    </section>
+
+    <!-- CONTAINER -->
+
+    <section>
+        <div class="container-fluid">
+            <hr>
+            <div class="row" style="margin-right: 0;">
+                <div class="col-xl-4 text-center">
+                    <p>
+                        <span>September</span>
+                        <span>14th</span>
+                    </p>
+                </div>
+                <div class="col-xl-4 text-center">
+                    <p>
+                        <span>3Arena</span>
+                    </p>
+                </div>
+                <div class="col-xl-4 text-center">
+                    <p>
+                        <span>Dublin</span>
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row" style="margin-right: 0;">
+                <div class="col-xl-4 text-center">
+                    <p>
+                        <span>September</span>
+                        <span>28th</span>
+                    </p>
+                </div>
+                <div class="col-xl-4 text-center">
+                    <p>
+                        <span>Olympia Theatre</span>
+                    </p>
+                </div>
+                <div class="col-xl-4 text-center">
+                    <p>
+                        <span>72 Dame St, Dublin</span>
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row me-0">
+                <div class="col-xl-4 text-center">
+                    <p>
+                        <span>October</span>
+                        <span>3rd</span>
+                    </p>
+                </div>
+                <div class="col-xl-4 text-center">
+                    <p>
+                        <span>The Gibson Hotel</span>
+                    </p>
+                </div>
+                <div class="col-xl-4 text-center">
+                    <p>
+                        <span>The Point Village, Dublin</span>
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row me-0">
+                <div class="col-xl-4 text-center">
+                    <p>
+                        <span>October</span>
+                        <span>24th</span>
+                    </p>
+                </div>
+                <div class="col-xl-4 text-center">
+                    <p>
+                        <span>Croke Park</span>
+                    </p>
+                </div>
+                <div class="col-xl-4 text-center">
+                    <p>
+                        <span>Jones's Rd, Dublin</span>
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row me-0">
+                <div class="col-xl-4 text-center">
+                    <p>
+                        <span>November</span>
+                        <span>4th</span>
+                    </p>
+                </div>
+                <div class="col-xl-4 text-center text-center">
+                    <p>
+                        <span>The Sugar Club</span>
+                    </p>
+                </div>
+                <div class="col-xl-4 text-center">
+                    <p>
+                        <span>8 Lwr Leeson St, Dublin</span>
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row me-0">
+                <div class="col-xl-4 text-center">
+                    <p>
+                        <span>November</span>
+                        <span>20th</span>
+                    </p>
+                </div>
+                <div class="col-xl-4 text-center">
+                    <p>
+                        <span>Aviva Stadium</span>
+                    </p>
+                </div>
+                <div class="col-xl-4 text-center">
+                    <p>
+                        <span>65-79 Lansdowne Rd, Dublin</span>
+                    </p>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </section>
+    <div>
+        <h3 class="text-center">
+            <button class="" id="prevbtn" onClick="changeViewPrev()" style="background-color:white;">Previous</button>
+            Upcoming Concert Location
+            <button id="nextbtn" onClick="changeViewNext()" style="background-color:white;">Next</button>
+        </h3>
+    </div>
+    <iframe id="frame" class="text-center d-grid gap-1 col-6 mx-auto mb-5" src="1.html" height="200"></iframe>
+
+
+
+    <div class="text-center d-grid col-12 mx-auto mb-5">
+        <a href="https://www.ticketmaster.com/" class="eslam">
+            <span class="text-center">
+                Buy Tickets
+            </span>
+        </a>
+    </div>
+
+    <footer class="grey text-center" style="height:10rem; font-size:3rem;">
+        <a href="http://www.facebook.com" target="_blank" rel="noopener"><i class="fa-brands fa-facebook me-3 text-white"></i></a>
+        <a href="http://www.twitter.com" target="_blank" rel="noopener"><i class="fa-brands fa-twitter me-3 text-white"></i></a>
+        <a href="http://www.twitch.com" target="_blank" rel="noopener"><i class="fa-brands fa-twitch me-3 text-white"></i></a>
+        <a href="http://www.spotify.com" target="_blank" rel="noopener"><i class="fa-brands fa-spotify me-3 text-white"></i></a>
+        <a href="http://www.youtube.com" target="_blank" rel="noopener"><i class="fa-brands fa-youtube me-3 text-white"></i></a>
+        <br />
+        <span style="color:white; font-size:1rem;">TheBlades &copy;</span>
+        <span style="color:white; font-size:1rem;">The Blades &reg;</span>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
