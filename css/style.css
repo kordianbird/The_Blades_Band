@@ -17,6 +17,7 @@
     font-family: 'Brush Script MT', 'Lily Script One';
 }
 
+
 .hero-image-short {
     display: flex;
     align-items: center;
@@ -29,6 +30,11 @@
 }
 
 /* custom classes*/
+
+.btn-map {
+    display:contents;
+}
+
 .eslam:before,
 .eslam:after,
 .eslam span:before,
@@ -160,6 +166,46 @@ video{
     }
 }
 
+@media screen and (max-width: 600px) {
+    .news-image {
+        width: 300px !important;
+        height: 400px !important;
+    }
+}
+
+@media screen and (min-width: 601px ) and (max-width: 1500px) {
+    .news-image {
+        width: 300px !important;
+        height: 400px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #prevbtn,
+    #nextbtn {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #concert-h {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #concert-h {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .email-btn input {
+        font-size: 20px;
+    }
+}
+
+
 /* animations */
 
 @keyframes animation {
@@ -208,4 +254,34 @@ nav {
     animation-name: image;
     animation-timing-function: ease-in-out;
     animation-iteration-count: 1;
+}
+
+/* Hover States */
+
+#prevbtn:hover,
+#nextbtn:hover {
+    background-color: darkgray !important;
+}
+
+.totop:hover {
+    background-color:darkgray;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* Tooltips */
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
 }
