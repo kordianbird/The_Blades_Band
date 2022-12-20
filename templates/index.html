@@ -161,6 +161,18 @@
         </div>
     </div>
 
+    {% for comment in comments %}
+
+    <div class="row">
+        <div class="col-6 mx-auto bg-dark text-light mb-3 comment">
+            <h5>
+                {{ comment.name }}
+            </h5>
+            {{ comment.comment }}
+        </div>
+    </div>
+    {% endfor %}
+
     <a href="#" class="square totop">
         <i class="fa fa-chevron-up"></i>
     </a>

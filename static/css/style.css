@@ -31,6 +31,10 @@
 
 /* custom classes*/
 
+.comment {
+    border-radius: 10px;
+}
+
 .btn-map {
     display:contents;
 }

@@ -68,10 +68,7 @@
     <h6>Pippin</h6>
     <img class="mb-5 slide-border news-image" src="{{ url_for('static', filename = 'images/Italian-greyhound3.png') }}" style="width:474px; height:400px;" />
 </div>
-    {% for comment in comments %}
-    {{ comment.comment }} <br>
-    {{ comment.name }}
-    {% endfor %}
+
 {% endblock %}
 
     

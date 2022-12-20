@@ -19,31 +19,28 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/news1")
 def newsone():
-    comments = mongo.db.comments.find()
-    return render_template("news1.html", comments=comments)
+    return render_template("news1.html")
 
 
 @app.route("/news2")
 def newstwo():
-    comments = mongo.db.comments.find()
-    return render_template("news2.html", comments=comments)
+    return render_template("news2.html")
 
 
 @app.route("/news3")
 def newsthree():
-    comments = mongo.db.comments.find()
-    return render_template("news3.html", comments=comments)
+    return render_template("news3.html")
 
 
 @app.route("/news4")
 def newsfour():
-    comments = mongo.db.comments.find()
-    return render_template("news4.html", comments=comments)
+    return render_template("news4.html")
 
 
 @app.route("/index")
 def index():
-    return render_template("index.html")
+    comments = mongo.db.comments.find()
+    return render_template("index.html", comments=comments)
 
 
 @app.route("/news")
