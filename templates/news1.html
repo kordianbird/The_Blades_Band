@@ -15,10 +15,13 @@
     </style>
 </head>
 <body>
+{% extends "base.html" %}
+{% block content %}
     {% for comment in comments %}
     {{ comment.comment }} <br>
     {{ comment.name }}
     {% endfor %}
+{% endblock %}
     <!-- NAVBAR
 
     <nav class="navbar navbar-expand-lg bg-light">
