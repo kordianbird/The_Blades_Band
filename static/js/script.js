@@ -6,14 +6,14 @@ var currentView = 1,
 function changeViewNext() {
     if (currentView >= minView && currentView < maxView) {
         currentView++;
-        frame.src = currentView + '.html';
+        frame.src = currentView.toString() + 'html';
     }
 }
 
 function changeViewPrev() {
     if (currentView <= maxView && currentView > minView) {
         currentView--;
-        frame.src = currentView + '.html';
+        frame.src = currentView.toString() + 'html';
     }
 }
 

@@ -9,161 +9,19 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <script src="https://kit.fontawesome.com/56ab3192f1.js" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("YRLjvS-l2x8RTc3P_");
+        })();
+    </script>
 </head>
 <body>
+
     {% block content %}
     {% endblock %}
-    <!-- NAVBAR -->
-
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="{{ url_for('static', filename = 'images/The-Blades-Logo.png') }}" alt="Bootstrap" width="30" height="24">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="news.html">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="concerts.html">Concerts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-            <form id="nameForm" onsubmit="store()">
-                <input id="demo-hide" type="text" style="float:right;">
-                <input type="submit" value="submit" />
-            </form>
-            <p id="name"></p>
-        </div>
-    </nav>
-
-    <!-- Hero Image -->
-
-    <section class="hero-image mb-3">
-        <img class="img-fluid" src="{{ url_for('static', filename = 'images/pledge-banner@2x.jpg') }}" alt="concert">
-        <div class="center">
-            <p>We are razor sharp</p>
-        </div>
-    </section>
-
-    <!-- About Section -->
-
-    <div class="container-fluid text-center">
-        <div class="row" style="margin-bottom: 50px;">
-            <div class="col"></div>
-            <div class="col-lg-4 col-md-8 col-sm-10 border-black">
-                <h2>About Us</h2>
-                <p>
-                    <strong>
-                        The Blades have sold over 2 million copies of their first album
-                        "Sharper Than Blades" in Ireland and have currently sold 4 million
-                        copies of their new album "Happy Souls" world wide.
-                        Their song "Blast" was the 3rd best song on officialcharts.com in 2020
-                        which helped them gain popularity in other countries. The Blades have
-                        went on 2 all Ireland tours in 2020 and
-                        2021 with more tours to come in the future and possibly an all Europe
-                        tour sometime in summer of 2023.
-                    </strong>
-                </p>
-            </div>
-            <div class="col"></div>
-        </div>
-    </div>
-
-    <!-- Band Members -->
-
-    <div class="container-fluid">
-        <div class="row mb-5">
-            <div class="col-md-12 col-lg-offset-2 col-lg-2 text-center no-m ms-auto">
-                <img src="{{ url_for('static', filename = 'images/rock-style-men-style-for-men.jpg') }}" alt="Chris" height="221">
-            </div>
-            <div class="col-md-12 col-lg-4" style="margin-right: auto;">
-                <p>
-                    <b>Chris</b> always enjoyed playing guitar which in the end got him playing
-                    concerts all over Ireland. He began playing on an accoustic
-                    guitar when he was 7 years old and followed
-                    his passion for music in secondary school where
-                    he attended a music club where he met his three best friends.
-                    Chris easily managed to convince his friends to start their own band
-                    and spent their weekends together practicing
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
-        <div class="row mb-5">
-            <div class="col-md-12 col-lg-offset-2 col-lg-2 text-center no-m ms-auto">
-                <img src="{{ url_for('static', filename = 'images/Biker-Jackets.jpg') }}" alt="Chris" height="221">
-            </div>
-            <div class="col-md-12 col-lg-4" style="margin-right: auto;">
-                <p>
-                    <b>Sean</b> spent most of his days helping his dad around their farm and
-                    never was the type of person to have his life planned out ahead
-                    of time so it definitly was a surprise
-                    when he told his family that he was leaving the farm to go chase
-                    his new found dream of playing in a rock band. Sean knew that he
-                    couldn't spend all his life working on
-                    a farm and so he reached for the stars
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
-        <div class="row mb-5">
-            <div class="col-md-12 col-lg-offset-2 col-lg-2 text-center no-m ms-auto">
-                <img src="{{ url_for('static', filename = 'images/Denver-Street-Style-1.jpg') }}" alt="Chris" height="221">
-            </div>
-            <div class="col-md-12 col-lg-4" style="margin-right: auto;">
-                <p>
-                    <b>Steven</b> took a great liking to music when he was attending secondary
-                    school. When he first joined the music club he felt bored of constantly
-                    playing the tin whistle or
-                    the cow bell but when he met Chris and tried playing on an electric
-                    guitar his whole perspective on music changed. After many years
-                    of practicing he felt like he had
-                    mastered the electric guitar and he was ready to be a rock star
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid">
-        <div class="row mb-5">
-            <div class="col-md-12 col-lg-offset-2 col-lg-2 text-center no-m ms-auto">
-                <img src="{{ url_for('static', filename = 'images/rockabilly-outfits-rock-style-men-rockabilly.jpg') }}" alt="Chris" height="221">
-            </div>
-            <div class="col-md-12 col-lg-4" style="margin-right: auto;">
-                <p>
-                    <b>Liam</b> had two hobbies, fixing up his old broken down car and playing the
-                    drums. For him nothing could beat the feeling of a wrench in one
-                    hand and beer in the other.
-                    He only had two options in life, be a mechanic or a
-                    rock star. Fortunately his friends convinced him to join their
-                    brand new band they named "The Blades" and Liam
-                    has absolutely no regrets
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <a href="#" class="square totop">
-        <i class="fa fa-chevron-up"></i>
-    </a>
 
 
     <footer class="grey text-center" style="height:10rem; font-size:2rem;">

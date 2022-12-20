@@ -16,11 +16,12 @@
 </head>
 <body>
     <!-- NAVBAR -->
-
+    {% extends "base.html" %}
+    {% block content %}
     <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="images/The-Blades-Logo.png" alt="Bootstrap" width="30" height="24">
+                <img src="{{ url_for('static', filename = 'images/The-Blades-Logo.png') }}" alt="Bootstrap" width="30" height="24">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,19 +29,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="{{ url_for('index')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="news.html">News</a>
+                        <a class="nav-link" href="{{ url_for('news')}}">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="gallery.html">Gallery</a>
+                        <a class="nav-link" href="{{ url_for('gallery')}}">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="concerts.html">Concerts</a>
+                        <a class="nav-link" href="{{ url_for('concerts')}}">Concerts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
+                        <a class="nav-link" href="{{ url_for('contact')}}">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -49,7 +50,7 @@
     </nav>
 
     <section class="hero-image-short mb-5">
-        <img class="img-fluid" src="images/banner.png" alt="concert">
+        <img class="img-fluid" src="{{ url_for('static', filename = 'images/banner.png') }}" alt="concert">
         <div class="center">
             <p>News and Events</p>
         </div>
@@ -62,11 +63,11 @@
         <div class="row">
             <div class="row mb-5 col-lg-4 col-md-8 mx-auto">
                 <div class="slide-border card mx-auto padding-none" style="width: 38rem;">
-                    <img src="images/Italian-greyhound3.png" class="card-img-top" alt="...">
+                    <img src="{{ url_for('static', filename = 'images/Italian-greyhound3.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Our lead singer Steven just adopted a retired greyhound!</h5>
                         <p class="card-text">
-                            <a class="text-black" href="news1.html">READ MORE..</a>
+                            <a class="text-black" href="{{ url_for('newsone') }}">READ MORE..</a>
                         </p>
                     </div>
                 </div>
@@ -78,11 +79,11 @@
         <div class="row">
             <div class="row mb-5 col-lg-4 col-md-8 mx-auto">
                 <div class="slide-border card mx-auto padding-none" style="width: 38rem;">
-                    <img src="images/Europe-Highlights-map-2.png" class="card-img-top" alt="...">
+                    <img src="{{ url_for('static', filename = 'images/Europe-Highlights-map-2.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">The Blades are finally planning a tour in Europe in 2022!</h5>
                         <p class="card-text">
-                            <a class="text-black" href="news2.html">READ MORE..</a>
+                            <a class="text-black" href="{{ url_for('newstwo') }}">READ MORE..</a>
                         </p>
                     </div>
                 </div>
@@ -94,11 +95,11 @@
         <div class="row">
             <div class="row mb-5 col-lg-4 col-md-8 mx-auto">
                 <div class="slide-border card mx-auto padding-none" style="width: 38rem;">
-                    <img src="images/ozzy.png" class="card-img-top" alt="...">
+                    <img src="{{ url_for('static', filename = 'images/ozzy.png') }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">The Prince of Darkness Ozzy Osbourne was inspired by The Blades!</h5>
                         <p class="card-text">
-                            <a class="text-black" href="news3.html">READ MORE..</a>
+                            <a class="text-black" href="{{ url_for('newsthree') }}">READ MORE..</a>
                         </p>
                     </div>
                 </div>
@@ -110,11 +111,11 @@
         <div class="row">
             <div class="row mb-5 col-lg-4 col-md-8 mx-auto">
                 <div class="slide-border card mx-auto padding-none" style="width: 38rem;">
-                    <img src="images/jackie-welles-cyberpunk-2077-4k-9y-2560x1440.jpg" class="card-img-top" alt="...">
+                    <img src="{{ url_for('static', filename = 'images/jackie-welles-cyberpunk-2077-4k-9y-2560x1440.jpg') }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">The Blades in Cyberpunk 2077</h5>
                         <p class="card-text">
-                            <a class="text-black" href="news4.html">READ MORE..</a>
+                            <a class="text-black" href="{{ url_for('newsfour') }}">READ MORE..</a>
                         </p>
 
                     </div>
@@ -126,6 +127,9 @@
     <a href="#" class="square totop">
         <i class="fa fa-chevron-up"></i>
     </a>
+    {% endblock %}
+
+    
     <footer class="grey text-center" style="height:10rem; font-size:2rem;">
         <a href="http://www.facebook.com" target="_blank" rel="noopener"><i class="fa-brands fa-facebook me-3 text-white"></i></a>
         <a href="http://www.twitter.com" target="_blank" rel="noopener"><i class="fa-brands fa-twitter me-3 text-white"></i></a>

@@ -15,6 +15,8 @@
     </style>
 </head>
 <body>
+    <!-- NAVBAR -->
+
 {% extends "base.html" %}
 {% block content %}
 
@@ -49,32 +51,21 @@
     </div>
 </nav>
 
-<div class="col-lg-4 col-md-8 col-sm-10 mb-5 container-fluid bg-light mt-5 text-center" style="box-shadow:1px 5px 25px 10px black;">
-    <h3 class="text-center">Our lead singer Steven just adopted a retired greyhound!</h3>
-    <aside>
-        The lead singer of "The Blades" Steven is known to have a love for animals. He is mostly seen around the streets of dublin walking
-        his two <a href="https://en.wikipedia.org/wiki/Husky">Huskies</a>. Steven's passion for dogs has led him to
-        donating almost half a million euros to <a href="https://www.dogstrust.ie/">DogsTrust</a> where he helped
-        provide new homes for hundreds of canines as well as providing equipment and food to those dogs that are
-        currently still in care. Of course Steven is always looking to add new members to his furry family including the
-        recently rescued <a href="https://en.wikipedia.org/wiki/Greyhound">Greyhound</a> Pippin. Pippin was
-        rescued from a dog shelter in belfast where he lived for nearly 6 months until he was taken into care
-        by Steven.
-    </aside>
-    <h6>Poppy</h6>
-    <img class="mb-5 slide-border news-image" src="{{ url_for('static', filename = 'images/OIP (1).png') }}" alt="" />
-    <h6>Sam</h6>
-    <img class="mb-5 slide-border news-image" src="{{ url_for('static', filename = 'images/big_image.jpeg') }}" alt="" style="width:474px; height:632px;" />
-    <h6>Pippin</h6>
-    <img class="mb-5 slide-border news-image" src="{{ url_for('static', filename = 'images/Italian-greyhound3.png') }}" style="width:474px; height:400px;" />
-</div>
+    <div class="col-lg-4 col-md-8 col-sm-10 mb-5 container-fluid bg-light mt-5 text-center" style="box-shadow:1px 5px 25px 10px black;">
+        <h3 class="text-center">The Blades in Cyberpunk 2077</h3>
+        <aside>
+            The well known and loved video game <a href="https://www.cyberpunk.net/ie/en/">Cyberpunk 2077</a>
+            will be releasing new content in the next coming months including a new radio station that players
+            can listen to while exploring in their vehicles. This new radio station will feature several of our
+            most popular songs. We are so happy that our songs will let players chill out and rock on in the cyber world!
+        </aside>
+        <img class="mb-5 mt-5 slide-border news-image" src="{{ url_for('static', filename = 'images/jackie-welles-cyberpunk-2077-4k-9y-2560x1440.jpg') }}" style="width:600px; height:400px;" />
+    </div>
     {% for comment in comments %}
     {{ comment.comment }} <br>
     {{ comment.name }}
     {% endfor %}
 {% endblock %}
-
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>

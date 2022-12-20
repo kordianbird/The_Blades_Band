@@ -1,0 +1,52 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename = 'images/The-Blades-Logo.png') }}" alt="Bootstrap" width="30" height="24">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="{{ url_for('index')}}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('news')}}">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('gallery')}}">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('concerts')}}">Concerts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('contact')}}">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <p id="name"></p>
+    </div>
+</nav>
+
+    <div class="col-lg-4 col-md-8 col-sm-10 mb-5 container-fluid bg-light mt-5 text-center" style="box-shadow:1px 5px 25px 10px black;">
+        <h3 class="text-center">The Blades are finally planning a tour in Europe in 2022!</h3>
+        <aside>
+            The Blades have now toured around Ireland twice but with the band's growing popularity it's
+            about time to take a tour around Europe. As of right now they are
+            planning to visit their fans in Germany, Sweden, Poland and France
+            although some countries will be added to the list considering the band's growing fanbase.
+            Other countries that may be added are currently Netherlands and Italy. You can vote for
+            your country to be selected for the tour on The Blades Official Twitter <a href="https://twitter.com/">HERE</a>
+        </aside>
+        <img class="slide-border mb-5 mt-5 news-image" id="europe" src="{{ url_for('static', filename = 'images/Europe-Highlights-map-2.png') }}" alt="Alternate Text" width="600px" />
+    </div>
+    {% for comment in comments %}
+    {{ comment.comment }} <br>
+    {{ comment.name }}
+    {% endfor %}
+{% endblock %}
